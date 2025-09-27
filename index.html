@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sacrifice Among Friends - 2D Game</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div id="menu-screen" class="screen active">
+			<h1>Sacrifice Among Friends</h1>
+			<p>Guide Sonia, Ari, and Stefi through harsh, complex challenges. Every choice matters.</p>
+			<button id="start-btn">Start Game</button>
+		</div>
+		<div id="game-screen" class="screen">
+			<canvas id="game-canvas" width="600" height="400"></canvas>
+			<div id="ui-panel">
+				<h2>Task <span id="task-number">1</span> of 5</h2>
+				<div id="task-desc"></div>
+				<div id="choices"></div>
+			</div>
+		</div>
+		<div id="end-screen" class="screen">
+			<h2>Game Over</h2>
+			<p id="ending-text"></p>
+			<button id="restart-btn">Restart</button>
+		</div>
+	</div>
+	<script src="game.js"></script>
+</script>
+<!-- Scary background sound -->
+<audio id="bg-audio" src="scary_bg.mp3" loop autoplay></audio>
+
+<!-- Jumpscare video overlay -->
+<div id="jumpscare-video-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:black; z-index:9999; justify-content:center; align-items:center;">
+	<video id="jumpscare-video" width="100%" height="100%" autoplay>
+		<source src="jumpscare.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+</div>
+</body>
+</html>
